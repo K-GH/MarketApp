@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "ae001b6e-76e9-4ca3-8212-ca1a9d914a24",
+		"name": "octoberMarket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstName",
+											"value": "khaled",
+											"type": "text"
+										},
+										{
+											"key": "lastName",
+											"value": "ghonaim",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "khaled@test4.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "123659875",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}user/register",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"register"
+									]
+								},
+								"description": "\nit have to take Accept-Language = ar or en"
+							},
+							"response": []
+						},
+						{
+							"name": "user login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "khaled@test4.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "user_type",
+											"value": "normal user",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}user/login",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"login"
+									]
+								},
+								"description": "\nit have to take Accept-Language = ar or en"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "shops by cat_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hcGkvdXNlci9sb2dpbiIsImlhdCI6MTU3MzI0OTkyMSwiZXhwIjoxNTczMjUzNTIxLCJuYmYiOjE1NzMyNDk5MjEsImp0aSI6IjlPb01uaVVSMjVEbjI5M08ifQ.Fl2u1oZk-oB2Yt_AOdAQSvfxJ5vomMiXEn26sBIvCyE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"type": "text",
+								"value": "ar"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}shop",
+							"host": [
+								"{{url}}shop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hcGkvdXNlci9sb2dpbiIsImlhdCI6MTU3MjYzMDIxNiwiZXhwIjoxNTcyNjMzODE2LCJuYmYiOjE1NzI2MzAyMTYsImp0aSI6IjlZMlMzTFFJOXJlNkdGQ1cifQ.HZlKQg4pNJ6JqpTIkLgsSlc5zOXoPwPxoirFRnPYdGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}category",
+							"host": [
+								"{{url}}category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

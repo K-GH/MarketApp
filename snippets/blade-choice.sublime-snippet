@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+@choice('${1:language.line}', ${2:number})
+]]></content>
+    <tabTrigger>choice</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>
